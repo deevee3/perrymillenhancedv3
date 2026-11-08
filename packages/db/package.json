@@ -1,0 +1,12 @@
+{
+  "name": "@pkg/db",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./schema": "./schema.ts"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.33.0"
+  }
+}

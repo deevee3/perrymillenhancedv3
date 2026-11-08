@@ -1,0 +1,20 @@
+{
+  "name": "perry-mill",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@9.9.0",
+  "scripts": {
+    "dev:api": "pnpm --filter @app/api dev",
+    "dev:worker:extract": "pnpm --filter @app/worker-extract dev",
+    "dev:worker:rss": "python apps/worker-rss/main.py",
+    "test:api": "pnpm --filter @app/api test",
+    "test:rss": "pytest apps/worker-rss",
+    "db:generate": "drizzle-kit generate --config packages/db/drizzle.config.ts",
+    "db:migrate": "drizzle-kit migrate --config packages/db/drizzle.config.ts",
+    "db:push": "drizzle-kit push --config packages/db/drizzle.config.ts"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.15.5",
+    "ts-node": "^10.9.2"
+  }
+}
